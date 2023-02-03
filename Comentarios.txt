@@ -1,0 +1,17 @@
+Comentarios
+
+Evitar usar comentarios, pero...
+
+Cuando usamos librerías de terceros, APIS, frameworks, etc. Nos encontraremos ante
+situaciones en las que escribir un comentario será mejor que dejar una solución compleja
+o un hack sin explicación.
+
+Los comentarios deberían de ser la excepción, no la regla.
+
+"no comentes el código mal escrito, reescríbelo" - Brian W. Kernighan
+
+Recuerda:
+Nuestro código debe ser suficientemente auto explicativo.
+
+Pero a veces es necesario comentarlo.
+Se comenta el ¿Por qué?

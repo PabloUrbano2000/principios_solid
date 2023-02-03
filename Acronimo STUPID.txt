@@ -1,0 +1,120 @@
+Concepto Acrónimo STUPID
+
+6 Code Smells que debemos de evitar.
+
+- Singleton: patrón singleton.
+- Tight Coupling: alto acoplamiento.
+- Untestability: código no probable (unit test).
+- Premature optimization: optimizaciones prematuras.
+- Indescriptive Naming: nombres poco descriptivos.
+- Duplication: duplicidad de código, no aplicar el principio DRY. 
+
+---------------------------------
+Ejemplos en el proyecto...
+---------------------------------
+
+---------- Patrón singleton -----------
+
+Pros
+- Garantiza una única instancia de la clase a lo largo de toda la aplicación.
+
+Contras
+- Vive en el contexto global.
+- Puede ser modificado por cualquiera y en cualquier momento.
+- No es rastreable.
+- Difícil de testear debido a su ubicación.
+
+---------- Alto acoplamiento ----------
+
+Lo ideal es tener bajo acoplamiento y buena cohesión.
+
+1. Desventajas
+- Un cambio en un módulo por lo general provoca un efecto dominó de los cambios
+en otros módulos.
+- El ensamblaje de módulos puede requerir más esfuerzo y/o tiempo debido a la
+mayor dependencia entre módulos.
+- Un módulo en particular puede ser más difícil de reutilizar y/o probar porque
+se deben incluir módulos dependientes.
+
+2. Posibles soluciones
+- "A" tiene un atributo que se refiere a "B".
+- "A" llama a los servicios de un objeto "B".
+- "A" tiene un método que hace referencia a "B" (a través del tipo de retorno o
+parámetro).
+- "A" es una subclase de (o implementa) la clase "B".
+
+"Queremos diseñar componentes que sean auto-contenidos, auto suficientes e 
+independientes. Con un objetivo y un propósito bien definido." - The Pragmatic Programmer
+
+
+Cohesión:
+
+Lo ideal es tener bajo acoplamiento y buena cohesión.
+
+- La cohesión se refiere a lo que la clase (o módulo) puede hacer.
+- La baja cohesión significaría que la clase realiza una gran variedad de 
+acciones: es amplia, no se enfoca en lo que debe hacer.
+- Alta cohesión significa que la clase se enfoca en lo que debería estar haciendo, es decir,
+solo métodos relacionados con la intención de la clase.
+
+Acoplamiento:
+
+Lo ideal es tener bajo acoplamiento y buena cohesión.
+
+Se refiere a cuán relacionadas o dependientes son dos clases o módulos entre sí.
+- En bajo acoplamiento, cambiar algo importante en una clase no debería afectar a la otra.
+- En alto acoplamiento, dificultaría el cambio y el mantenimiento de su código;
+dado que las clases están muy unidas, hacer un cambio podría requerir una renovación
+completa del sistema.
+
+UN BUEN DISEÑO DE SOFTWARE TIENE UNA ALTA COHESIÓN Y UN BAJO ACOPLAMIENTO
+
+
+---------- Código no probable -----------
+
+Código dificilmente testeable
+- Código con alto acoplamiento.
+- Código con muchas dependencias no inyectadas.
+- Dependencias en el contexto global (Tipo Singleton).
+
+Debemos de tener en mente las pruebas desde la creación del código.
+
+---------- Optimizaciones prematuras -----------
+
+- Mantener abiertas las opciones retrasando la toma de desiciones nos
+permite darle mayor relevancia a lo que es más importante en una aplicación.
+- No debemos anticiparnos a los requisitos y desarrollar abstracciones innecesarias
+que puedan añadir complejidad accidental.
+
+Complejidad esencial: La complejidad es inherente al problema.
+Complejidad accidental: Cuando implementamosuna solución compleja a al mínima indispensable.
+
+
+---------- Nombres pocos descriptivos -----------
+
+- Nombres de variables mal nombradas.
+- Nombres de clases genéricas.
+- Nombres de funciones mal nombradas.
+- Ser muy específico o demasiado genérico.
+
+La única medida de calidad de código es el "WTF" por minuto.
+
+
+-------------- Duplicidad de código --------------
+
+No aplicar el principio DRY
+
+Duplicidad Real:
+- Código es idéntico y cumple la misma función.
+- Un cambio implicaría actualizar todo el código idéntico en varios lugares.
+- Incrementa posibilidades de error humano al olvidar una parte para actualizar.
+- Mayor cantidad de pruebas innecesarias.
+
+Duplicidad Accidental:
+- Código luce similar pero cumple funciones distintas.
+- Cuando hay un cambio, sólo hay que modificar un sólo lugar.
+- Este tipo de duplicidad se puede trabajar con parámetros u optimizaciones.
+
+
+
+

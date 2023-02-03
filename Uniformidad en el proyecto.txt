@@ -1,0 +1,13 @@
+Uniformidad en el proyecto
+
+Problemas similares, soluciones similares:
+
+- Esto no solo aplica en código, sino también en la estructura de archivos. Esto depende
+del framework que estemos utilizando.
+
+Indentación:
+
+- Esto depende según reglas del equipo de desarrollo,
+una tabulación, media tabulación, etc.
+- Hay lenguajes como Python que la indentación es primordial,
+y hay otros como js que queda a discreción de uno.
